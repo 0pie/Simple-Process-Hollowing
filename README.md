@@ -1,2 +1,2 @@
 # Simple-Process-Hollowing
-A quick and simple exemple of how to use process hollowing for malicious activities
+A quick and simple example of how to use process hollowing for malicious activities
