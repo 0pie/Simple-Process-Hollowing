@@ -18,7 +18,7 @@ We can finally overwrite the process context with our context, resume the proces
 
 
 ## Detailed Method of context updating
-We first retrieves the context of the target thread using the ```GetThreadContext``` function, which fills the CONTEXT structure with the thread context.\
+We first retrieves the context of the target thread using the ```GetThreadContext``` function, which fills the ```CONTEXT``` structure with the thread context.\
 Then we sets the value of the EAX register to the address of the shellcode entry point. This is necessary because the shellcode entry point must be executed by the processor.\
 We do the same thing for the EIP register. This register points to the next instruction to be executed. Thanks to this our shellcode will be executed immediately after the process is resumed.\
 Finally we update the thread context using ```SetThreadContext``` so it replace the old context by ours.\
